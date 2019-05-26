@@ -1,0 +1,8 @@
+1) React shoud have only one top level component.
+   Eg: return (
+            <h1>Add Author</h1>
+            <AuthorForm />
+             );
+Here h1, AuthorForm are two top level components. React will throw an error ( Adjacent JSX elements must be wrapped in an enclosing tag).
+So either put AuthorForm and h1 in div or remove one top level component.
+2) React automatically redraws UI on every request animation frame. Even we type anything react will ignors it if there is no handler attached. In two way binding framework we do not have to attach handlers.

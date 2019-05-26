@@ -1,0 +1,22 @@
+Dotnet framework
+-----------------
+1) compiler (csc) takes source code and compiles into dll or exe (IL). IL is low level programming language. IL is not machine code. Not directly executable.
+2) FCL (Framework class library) are reference assembly needed by c# compiler to compile to produce IL.
+3) When we want to run the application the IL send to CLR. CLR generates the machine code and executes the machine code.
+4) mscorelib.dll is a root assembly which contains all assemblies wvwn we do not use they will be added.
+
+Dotnet core framework
+----------------------
+1) Dotnet core contains Roslyn compiler for compiling VB or C# code.
+2) From above C# 5.0, comes with Roslyn compiler. CSC compiler supports till C# 5.0. This means Roslyn also there in dotnet framework.
+3) Instead of FCL, we have CoreFX in dotnet core. 
+4) Instead of CLR, we have CoreCLR RyuJIT compiler.
+5) CoreFX and CoreCLR is open source and we can contribute to it.
+6) Dotnet core is modular.
+7) No mscorelib.dll in dotnet core. Load what you use. That's it. All the libraries are rewritten in dotnet core.
+8) This modular makes dotnet core faster.
+9) Some file can be copied in windows explorer folder of the project, and those files are added in visual studio automatically not like traditional dotnet framework. So dotnet core uses all files in the project folder.
+10) Default package references Microsoft.dotnetcore.App package
+11) adding a package to the dotnet core project have several ways, one we add dependencies in project.json, automatically VS adds the package in our project.
+12) project.json is mandatory in dotnet core.
+13) code will be compiled and run with dotnet command line utility.

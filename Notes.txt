@@ -1,0 +1,25 @@
+1) Browserify will render all npm packages to browser, convert jsx to js, bundle all js files to single file 
+2) Bootstrap for quality css
+3) ESLint for high code quanlity and code standards
+4) Gulp with tasks for build, file watches and automatic reloads
+
+React features
+-----------------
+1) Fast in responsive
+2) Virtual DOM
+3) Composable
+4) Pluggable
+5) Isomorphic Friendly
+6) Simple
+7) React focus only on View and Controller in MVC 
+8) No two way binding, (in two way binding, one UI change will trigger change in model, and that model change trigger change in another model and so on. So tracking which one has changed the model is difficult. Especially when developers interacting in same code base. In Uni-directional source of model change can be easily tracked.
+9) React offers JSX. which having both JS and HTML. JSX is optional. But preferable to use in React.
+10) Remaining frameworks like angular, knockout put JS in HTML, but React put HTML in JS. Instead of using HTML for logic, data-bind, loooping, use Javascript for this as Javascript is powerful technology than HTML.
+11) There is no seperation of concern in React.
+12) In Angular or knockout, the javascript and HTML fails, as javascript is strictly parsed but HTML does'nt strictly parsed. So application behave differently and putting the JS in HTML will not give line number correctly if error occurs. In JSX it will throw an error and give exact line. JSX follow fail fast, fail loudly. In JSX debugging easier. 
+13) React monitors state of the components. By then it compares the current state of the DOM and the new DOM (Virtual DOM) should look like, and then applies the change to the mismatch portion to the DOM. 
+  Remaining frameworks update entire DOM on every state change which is very expensive. The entire Virtual DOM concepts happens in memory. So it is fast.
+14) shouldComponentUpdate, PureRenderMixin+immutability
+15) More than performance React does Synthetic Events, Isomorphic Support, React native.
+16) JSX does HTML compiles to JS, Strict comiple time checking.
+

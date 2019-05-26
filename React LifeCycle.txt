@@ -1,0 +1,19 @@
+1) Data in react held in two places. Props and State. Props are immutable and can be passed to child component. State is mutable, modify the state only in top level component and pass state data to child using props.
+2) getInitialState function used for set initial state of the top level component (conroller view).
+3) getDefaultProps used to tell the component to use default values to the props if the parent component does not send any value.
+
+ Life cycle methods
+ --------------------
+ 1) componentWillMount - runs immediately before initial render, can be used on both client and server. Good spot to use initial state.
+   It has been announced that componentWillMount will only work until version 17 and UNSAFE_ will be prefixed to allow gradual migration. Means  UNSAFE_componentWillMount we be used. API calls shoule not be here as render method will always be immediately called after componentWillMount and there is no way to ask render to wait for the API call to finish. If you are doing server-side rendering of React components componentWillMount will get called on the server-side and again on the client, resulting in calling fetch two times. Hence, this is not definitely the place where we should integrate our APIs.
+
+ 2) componentWillReceiveProps - runs just before component props changes or received. Good spot to set state before next render. Not called on initial render.
+ 3) shouldComponentUpdate - runs before render when new props or state received. Not called on initial render. Good spot to use performance tuning. We can return false if we want to avoid unnecessary rendering.
+ 4) componentWillUpdate - runs immediately before rendering when new props or state received. Not called in initial render. We cannot call set state in this function. Good spot to prepare for an update.
+ 5) componentDidUpdate - runs after the component's update send to the DOM. Good spot to work with DOM after an update and our changes after the update will be rendered to the DOM.
+ 2) componentDidMount - runs after render. By the time this function called the component DOM exists. Good spot to integrate with third party component libraries, set timers, AJAX requests. Runs in initial render. If our component is rendered on the server, the APIs will not be called twice, once because on server side componentDidMount will not be called. Hence the API will be called only once in the client. Best place to call API.
+ 7) componentWillUnmount - runs immediately before component is removed from the DOM. Good spot to cleanup.
+
+ Keys for dynamic childern
+ --------------------------
+ 1) When creating child components dynamically, we have to key each child component. React uses this key to properly reorder or destroyed. Eg: <tr key={any unique id} >

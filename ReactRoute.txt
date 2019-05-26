@@ -1,0 +1,9 @@
+1) Route is for declararing routing
+2) DefaultRoute for "/" like index.html
+3) NotFoundRoute for 404
+4) Redirect for redirecting to another route
+5) <Route name="about" handler={require('./Components/About/About')}/>
+   if path attribute is not mentioned name is the path.
+6) There are two kinds of routing Hash Location, History Location
+   Hash location - yoururl.com#/courses (ugly, not compatable in server side rendering (isomorphic javascript))
+   History location - yoururl.com/courses (clean, support from IE10 +)

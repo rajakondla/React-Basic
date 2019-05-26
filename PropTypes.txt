@@ -1,0 +1,12 @@
+1) PropTypes used for props validation
+2) Eg: propTypes:{
+      author:React.PropTypes.object.isRequired,
+	  onSave:React.PropTypes.func.isRequired,
+	  validate:React.PropTypes.func.isRequired,
+	  errors:React.PropTypes.object,
+	  hasErrors:React.PropTypes.func.isRequired
+   }
+3) For preformance, prop validation or prop types runs in only development version of react. So document all issues in development.
+4) Every prop type that is not required, should have a backing field to get default props.
+5) Top level component also called Controller View. Controller View passes data down to child components using props.
+6) Mixins share behavior among many components.
