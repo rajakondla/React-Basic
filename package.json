@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "acorn": "^6.0.0",
+    "acorn": "^6.4.1",
     "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
     "flux": "^2.0.3",
